@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+<style>
+    form {width: 300px;}
+
+    /* input {width: 100%;} */
+</style>
+
+</head>
+<body>
+    <h1>Formulário de aula</h1>
+    <form method="get">
+        <label for="name">Name:</label>
+        <input
+         type="text"
+         id="name"
+         name="name"
+         placeholder="Digite seu nome"
+         required
+        >
+
+<br><br>
+
+    <button type="submit">Enviar</button>
+    </form>
+
+    <br><br>
+
+    <form method="get">
+        <fieldset>
+            <legend>Login</legend>
+
+            <section>
+            <label for="email">E-mail:</label>
+            <input type="email" name="E-mail" id="email"
+            placeholder="Seu email"
+            required
+            >
+            </section>
+
+            <br>
+
+            <section>
+            <label for="">Senha:</label>
+            <input type="password" name="Palavra Chave" id="senha"
+            placeholder="Digite uma senha forte"
+            required
+            >
+            <br><br>
+            <button>Enviar</button>
+
+            </section>
+        </fieldset>
+    </form>
+
+<br>
+
+    <form method="get">
+        <input type="number"
+        placeholder="Digite sua idade"
+        max="100"
+        min="14"
+        step="5"
+        >
+
+        <br><br>
+
+<input type="datetime-local">
+
+<br><br>
+
+<input type="range"
+min="0"
+max="100"
+value="50"
+step="5"
+>
+
+<br><br>
+
+<input type="file"
+accept="image/* video/* audio/*"
+multiple
+>
+
+<br><br>
+
+<input type="color"
+value="#ff0000"
+list="groupColorTheme"
+>
+
+<!-- <datalist id="groupColorTheme">
+    <option>#ff0000</option>
+    <option>#00ff00</option>
+    <option>#0000ff</option>
+    <option>#ff00dd</option>
+    <option>#ffd500</option>
+</datalist> -->
+
+<br><br>
+
+<label for="">HTML</label>
+<input type="checkbox" id="HTML">
+
+<label for="">CSS</label>
+<input type="checkbox" id="CSS">
+
+<br><br>
+
+<label for="">Sim</label>
+<input type="radio" name="term" id="yes" checked>
+
+<label for="">Não</label>
+<input type="radio" name="term" id="no">
+
+<br><br>
+
+<label for="Fruits">Seleção de frutas:</label>
+<select name="frutas" id="Fruits">
+    <option value="Manga">Manga</option>
+    <option value="Acerola">Acerola</option>
+    <option value="Abacaxi">Abacaxi</option>
+</select>
+
+<br><br>
+
+<label for="obs">Observações:</label>
+<textarea 
+name="obs" 
+id="obs" 
+cols="30" 
+rows="10"
+maxlength="255"
+></textarea>
+
+<br><br>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.square {
+    background: #3c463d;
+    height: 120px;
+    width: 120px;
+    padding: 16px;
+    /* border: 4px dashed black; */
+}
+
+#squareX {
+    display:  inline-block;
+    margin-top: 32px;
+    margin-left: 32px;
+}
+
+#squareY {
+    background: #ff002b;
+    display: inline-block;
+    
+}
+
+#squareZ {
+    background: #ff7d03;
+    display: inline-block;
+}

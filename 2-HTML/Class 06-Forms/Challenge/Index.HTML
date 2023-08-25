@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 06 Forms</title>
+
+<style>
+
+header {text-align: center; }
+
+fieldset {align-tracks: center;}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+    <main>
+        <form method="get">
+            <fieldset>
+                <legend>
+                   <strong>DADOS PESSOAIS</strong> 
+                </legend>
+
+<label for="">Nome:</label>
+<input type="text"
+id="name"
+name="Name"
+placeholder="Digite seu nome"
+required
+autofocus
+>
+
+<br><br>
+
+<label for="">Nascimento:</label>
+<input type="date">
+
+<br><br>
+
+<label for="">RG:</label>
+<input type="text"
+id="RG"
+name="RG"
+required
+placeholder="Número do seu RG"
+pattern="[0-9]{11}"
+maxlength="11"
+minlength="7"
+title="O campo necessita de 11 digitos"
+>
+
+<br><br>
+
+<label for="">CPF:</label>
+<input type="text"
+id="CPF"
+name="CPF"
+required
+placeholder="Número do seu CPF"
+pattern="[0-9]{11}"
+maxlength="11"
+minlength="11"
+title="O campo necessita de 11 digitos"
+>
+
+<br><br>
+
+<span>
+    <label for="Mas">Masculino</label>
+    <input type="radio" 
+    name="sexo" 
+    id="Masculino" 
+    value="M"
+    required
+    >
+</span>
+
+<span>
+    <label for="Fem">Feminino</label>
+    <input type="radio" 
+    name="sexo" 
+    id="Feminino" 
+    value="F"
+    required
+    >
+</span>
+
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>
+                    <strong>LINGUAGENS DE DOMÍNIO</strong>
+                </legend>
+
+                <span>
+                    <label for="html">HTML</label>
+                    <input type="checkbox">
+                </span>
+                
+                <span>
+                    <label for="css">CSS</label>
+                    <input type="checkbox">
+                </span>
+                
+                <span>
+                    <label for="javaScript">JavaScript</label>    
+                    <input type="checkbox">
+                </span>
+                
+                <span>
+                    <label for="sql">SQL</label>    
+                    <input type="checkbox">
+                </span>
+                
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>
+                    <strong>DADOS DE LOGIN</strong>
+                </legend>
+
+                <label for="">E-mail:</label>
+                <input type="email"
+                name="Endereço de email" id="email"
+                placeholder="username@gmail.com"
+                required
+                >
+
+            <br><br>
+
+                <label for="">Senha:</label>
+                <input type="password"
+                name="Palavra-chave" id="password"
+                placeholder="Digite uma senha forte"
+                required
+                >
+
+            <br><br>
+
+                <label for="">Foto:</label>
+                <input type="file"
+                accept="image/*"
+                name="image"
+                >
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>
+                  <strong>OBSERVAÇÕES</strong>  
+                </legend>
+                <textarea name="Obs" id="Observações" cols="30" rows="10"
+                maxlength="255"
+                placeholder="Faça uma Observações sobre você"
+                ></textarea>
+
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Salvar</button>
+            <button>Limpar</button>
+        </form>
+    </main>
+</body>
+</html>
