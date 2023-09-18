@@ -8,5 +8,8 @@ console.log(num1 + num2); //type coersion
 // Interpolation
 console.log("A soma é: " + (num1 + num2));
 
-//
-console.log("A soma é: " + num1 + " e " + num2 + " é; " (num1 + num2));
+// Concatenation
+console.log("A soma de " + num1 + " e " + num2 + " é: " (num1 + num2));
+
+// Template Literals (string)
+console.log(`A soma de ${num1} e ${num2} é: ${addition}`);
