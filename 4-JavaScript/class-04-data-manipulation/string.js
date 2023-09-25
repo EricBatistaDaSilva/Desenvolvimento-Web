@@ -31,11 +31,15 @@ console.log(phrase.includes("web"));
 console.log("web" == "Web"); // case-sensitive
 console.log(phrase.toLocaleLowerCase().includes("web") ? "Teste Verdadeiro" : "Teste Falso");
 
-// const console = {
-//     log: () => {
-//         return "imprimir"
-//     }
-// }
+const consoles = {
+    log: () => {
+        return "imprimir";
+    },
+    error: () => {
+        return "imprimir error";
+    },
+}
 
-// consoles.log()
-// console.log();
+consoles.log();
+consoles.error();
+console.log();
