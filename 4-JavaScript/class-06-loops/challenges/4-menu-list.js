@@ -31,7 +31,7 @@ while (true) {
                     break;
                 }
 
-                addItem = addItem.trim();
+                addItem = addItem.trim().split(" ").filter(Boolean).join(" ");
                 
                 if (addItem.trim() === "") {
                     alert("Por favor, digite um nome para cadastrar");
@@ -54,8 +54,38 @@ while (true) {
             break;
         case "3":
             console.log("Opção 3");
+            if (listItens.length === 1) {
+                const removedItemName = listItens.pop()
+                alert(`${removedItemName} foi removido com sucesso!`)
+                break;
+            }
+
+            while(true) {
+                if (listItens.length === 0) {
+                    alert("Lista vazia!");
+                    break;
+                } else {
+                    let itemNameToRemove = prompt("Digite o nome para remover:");
+
+                    if (itemNameToRemove === null) break;
+
+                    itemNameToRemove = itemNameToRemove.trim().split(" ").filter(Boolean).join(" ");
+
+                    if (itemNameToRemove === "") {
+                        alert("Por favor, inserir nome para remover.");
+                        continue;
+                    }
+
+                    if (listItens.includes(itemNameToRemove)) {
+                        listItens.splice(listItens.indexOf(itemNameToRemove), 1);
+                        alert(`"${itemNameToRemove}" foi removido com sucesso!`)
+                    } else {
+                        alert("Item não encontrado")
+                    }
+                }
+            }
+
             break;
-    
         default:
             alert("Opção inválida!")
     }
