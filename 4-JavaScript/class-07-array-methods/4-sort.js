@@ -28,3 +28,29 @@ arrayNumbers.sort((a, b) => String(a).localeCompare(b));
 
 console.log(arrayNames);
 console.log(arrayNumbers);
+
+const arrayAnimes = [
+    {name: "Cavaleiro do Zodíaco", year: 1986},
+    {name: "Dragon Ball", year: 1984},
+    {name: "Digimon Frontier", year: 2002},
+    {name: "Attack on Titan", year: 2013},
+    {name: "Pokémon", year: 1997},
+];
+
+const sortedArrayAnimes = arrayAnimes.sort((a, b) => {
+    if (a.year > b.year) return 1;
+    if (a.year < b.year) return -1;
+    return 0;
+});
+
+console.table(sortedArrayAnimes);
+console.table(arrayAnimes.sort((a, b) => a.year - b.year));
+
+const sortedArrayAnimesByName = arrayAnimes.sort((a, b) => {
+    if (a.name > b.name) return 1;
+    if (a.name < b.name) return -1;
+    return 0;
+});
+
+console.table(sortedArrayAnimesByName);
+console.table(arrayAnimes.sort((a, b) => a.name - b.name));
