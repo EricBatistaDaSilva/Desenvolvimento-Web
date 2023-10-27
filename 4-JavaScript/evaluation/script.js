@@ -20,6 +20,7 @@ console.log(50 / 2);
 console.log(250 % 15);
 console.log(12 ** 3);
 console.log(Math.sqrt(144));
+console.log(144 ** (1/3));
 
 // Questão 3 (Functions):
 // Crie e execute uma função de nome 'test" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno.
@@ -87,3 +88,9 @@ if (speed > maxSpeed) {
 // Apresente os novos salários e o novo total em folha dessa empresa
 
 const salary = [2000, 2800, 3000, 4000, 2200, 7500, 3650, 8000, 2000, 5000];
+
+const newSalary = salary.map((salary) => (salary * 10) / 100 + salary);
+
+const newTotal = newSalary.reduce((a, b) => a + b);
+
+console.log(newTotal.toLocaleString("pt-br", { style: "currency", currency: "brl"}));
