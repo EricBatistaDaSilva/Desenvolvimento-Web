@@ -8,4 +8,7 @@ app.listen(port, () => {
   console.log(`Server in running o PORT ${port}...`);
 });
 
+// middleware
+app.use(express.json())
+
 app.use(router)
