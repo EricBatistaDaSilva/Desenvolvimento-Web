@@ -28,11 +28,11 @@ export const authControllers = {
       const { email, password } = userSchema.parse(req.body);
 
       const user = await userRepository.getByEmail(email);
-      if (!user) throw res.status(401).json({ message: "email invalid!" });
+      if (!user) throw res.status(401).json({ message: "email or passward invalid!" });
 
       const passwordCheck = await compare(password, user.password);
       if (!passwordCheck) {
-        throw res.status(401).json({ message: "password invalid!" });
+        throw res.status(401).json({ message: "email or password invalid!" });
       }
 
       const token = sign({ id: user.id }, process.env.SECRET_TOKEN, {
